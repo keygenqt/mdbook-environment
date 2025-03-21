@@ -21,7 +21,7 @@ ENV_MDBOOK_VERSION2 = "$(curl -s 'https://api.github.com/repos/rust-lang/mdBook/
 
 ### Preview
 
-![preview](data/preview.png)
+![preview](https://github.com/keygenqt/mdbook-environment/raw/main/data/preview.png)
 
 ### License
 
