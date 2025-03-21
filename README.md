@@ -11,12 +11,20 @@ A preprocessor for MdBook for working with environment variables.
 
 ### Example
 
+**book.toml**
 ```toml
 [preprocessor.environment]
 # Just set environment
 ENV_MDBOOK_VERSION1 = "0.0.1"
 # Set environment with execute command
 ENV_MDBOOK_VERSION2 = "$(curl -s 'https://api.github.com/repos/rust-lang/mdBook/tags' | jq -r '.[0].name' | sed 's/v//')"
+```
+
+**chapter_1.md**
+```markdown
+Just set environment: {{ENV_MDBOOK_VERSION1}}.
+
+Set environment with execute command: {{ENV_MDBOOK_VERSION2}}.
 ```
 
 ### Preview
