@@ -1,0 +1,7 @@
+/target
+
+# temporarily
+/Cargo.lock
+
+# doc
+/docs/book

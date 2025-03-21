@@ -1,0 +1,15 @@
+[book]
+title = "MdBook Environment"
+authors = ["Vitaliy Zarubin"]
+language = "en"
+src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/keygenqt/mdbook-environment"
+
+[preprocessor.environment]
+# Debug
+command = "cargo run --manifest-path=../Cargo.toml --locked"
+# Variables
+ENV_MDBOOK_VERSION1 = "0.0.1"
+ENV_MDBOOK_VERSION2 = "$(curl -s 'https://api.github.com/repos/rust-lang/mdBook/tags' | jq -r '.[0].name' | sed 's/v//')"

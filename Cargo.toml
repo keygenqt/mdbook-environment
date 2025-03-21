@@ -1,0 +1,14 @@
+[package]
+name = "mdbook-environment"
+version = "0.0.1"
+authors = ["Vitaliy Zarubin <keygenqt@gmail.com>"]
+edition = "2024"
+license = "Apache-2.0"
+repository = "https://github.com/keygenqt/mdbook-environments"
+readme = "README.md"
+keywords = ["mdbook", "environments"]
+description = "A preprocessor for MdBook for working with environment variables."
+
+[dependencies]
+mdbook = "0.4"
+serde_json = "1.0.132"
