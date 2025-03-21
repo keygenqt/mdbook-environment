@@ -46,7 +46,7 @@ impl Preprocessor for MdBookEnvironment {
                                     Ok(output) => {
                                         if output.status.success() {
                                             if let Ok(stdout) = String::from_utf8(output.stdout) {
-                                                Some(stdout)
+                                                Some(stdout.trim().to_string())
                                             } else {
                                                 None
                                             }
