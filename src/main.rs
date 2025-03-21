@@ -41,7 +41,6 @@ impl Preprocessor for MdBookEnvironment {
                         Some(value) => {
                             let set_value: Option<String> = if value.starts_with("$(") & value.ends_with(")") {
                                 let command = &value[2..value.len() - 1];
-                                // match Command::new(program).args(&command[1..command.len()]).stdout(Stdio::piped()).output() {
                                 match Command::new("sh").args(["-c", command]).stdout(Stdio::piped()).output() {
                                     Ok(output) => {
                                         if output.status.success() {
